@@ -38,36 +38,6 @@ app-post-detail {
         }
         
     }
-    .title-hyb {
-        text-align: center;
-        position: relative;
-        &:before {
-            content: "";
-            height: 4px;
-            width: 100%;
-            background-color: #ff4500;
-            position: absolute;
-            left: 0;
-            top: 50%;
-            margin-top: -2px;
-        }
-        h5 {
-            display: inline-block;
-            margin: 0;
-            background-color: #DAE0E6;
-            position: relative;
-            padding: 0 40px;
-            font-size: 1.9rem;
-            font-style: italic;
-        }
-    }
-    
-    .related-stories {
-        margin-top: 30px;
-        img{
-            width: 100%;
-        }
-    }
     .widget-premium {
         position: relative;
         padding-top: 30px;
