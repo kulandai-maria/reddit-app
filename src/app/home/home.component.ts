@@ -18,11 +18,11 @@ export class HomeComponent implements OnInit {
         //   console.log(JSON.stringify(data.data.children(i)));
 
         // }
-        var i=0;
-        data.data.children.forEach(function(){
-        console.log(JSON.stringify(data.data.children[i]));
-          i++;
-        });
+        // var i=0;
+        // data.data.children.forEach(function(){
+        // console.log(JSON.stringify(data.data.children[i]));
+        //   i++;
+        // });
         this.namelist= data.data.children;
 
       }
