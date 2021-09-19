@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+// utilities
+@import './assets/scss/utilities/variables';
+
+// vendors
+@import './assets/scss/vendors/bootstrap';
+
+// base
+@import './assets/scss/base/reset';
+
+// layout
+@import './assets/scss/layout/layout';
+@import './assets/scss/layout/navigation';
+@import './assets/scss/layout/header';
+@import './assets/scss/layout/footer';
+@import './assets/scss/layout/sidebar';
+@import './assets/scss/layout/forms';
+
+// components
+@import './assets/scss/components/buttons';
+@import './assets/scss/components/media';
+@import './assets/scss/components/collapsible';
+// pages
+@import './assets/scss/pages/home';
+// theme
+@import './assets/scss/themes/theme';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background-color: $primary; }
+* {
+    box-sizing: border-box;
+
+}
+a {
+    text-decoration: none;
+    color: #000;
+    &:hover , &:focus{
+        text-decoration: none;
+        color: #000;
+    }
+}

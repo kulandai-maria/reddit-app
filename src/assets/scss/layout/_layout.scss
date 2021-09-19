@@ -1,0 +1,12 @@
+.app-layout {
+    //height: 100vh;
+    position: relative;
+    .app-wrap-content{
+        padding-top: 54px;
+       // min-height: 100%;
+        padding-bottom: 64px;
+        .app-content {
+            padding: 20px;
+        }
+    }
+}
