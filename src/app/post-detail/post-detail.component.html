@@ -68,12 +68,12 @@
                 <div class="card">
                     <div class="post-content">
                       
-                        <h4>Apology ‘not enough’, say survivors of US drone attack in Kabul</h4>
+                        <h4>{{postDetail.data}}</h4>
                         <p class="post-sub-title">Grieving relatives of Afghan civilian victims demand accountability, as well as financial compensation for their losses and relocation.</p>
                         <div class="post-by-wrap">
                             <div class="post-by">
                                 <img src="/assets/img/user.png" alt="">
-                                Posted by<span>&nbsp;u/Aaridahdewan&nbsp;</span> 9 minutes ago
+                                Posted by<span>&nbsp;{{postDetail.tauthor}}&nbsp;</span> 9 minutes ago
                               </div>
                               <div class="post-views">
                                 <i class="fas fa-eye"></i> 3.8k views
@@ -84,11 +84,11 @@
                           <div class="count-wrap">
                             <button><i class="fas fa-arrow-up"></i></button>                    
                             <button><i class="fas fa-arrow-down"></i></button>
-                            <div class="count">359</div>
+                            <div class="count">{{postDetail.tcount}}</div>
                           </div>
                           <div class="comments">
                             <i class="fas fa-comment"></i>
-                            20
+                            {{postDetail.tcomments}}
                           </div>
                           <div class="post-share-wrap">
                             <i class="fas fa-share-alt"></i>
@@ -99,7 +99,7 @@
                           </div>
                         </div>
                       </div>
-                  <div class="post-img"><img src="/assets/img/post2.jpg" alt="" srcset=""></div>
+                  <div class="post-img"><img src="{{postDetail.timg}}" alt="" srcset=""></div>
               
                 </div>
                 <div class="side-widget">
@@ -142,11 +142,7 @@
                     <div class="post-comment">
                       <div class="panel-group" id="accordion">
                         <div class="panel panel-default">
-                          <!-- <div class="panel-heading">
-                            <h4 class="panel-title">
-                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
-                            </h4>
-                          </div> -->
+                          
                               <a class="b-comment" data-toggle="collapse" aria-expanded="false" data-parent="#accordion" href="#collapse1">
                                 <img src="/assets/img/user.png" alt="">
 
@@ -175,34 +171,16 @@
                                     </div>                             
                                   </div>
                                 </div>    
+                              
                                                         
                               </a>
                         </div>
-                        <!-- <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h4 class="panel-title">
-                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 2</a>
-                            </h4>
-                          </div>
-                          <div id="collapse2" class="panel-collapse collapse">
-                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-                          </div>
-                        </div>
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h4 class="panel-title">
-                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
-                            </h4>
-                          </div>
-                          <div id="collapse3" class="panel-collapse collapse">
-                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-                          </div>
-                        </div> -->
+                       
                       </div> 
+                    </div>
+                    <div class="comment-detail" *ngFor="let j of Comments;let i = index;">
+                      Comments {{i}}: {{j.data.body}}
+                      
                     </div>
                 </div>
               </div>

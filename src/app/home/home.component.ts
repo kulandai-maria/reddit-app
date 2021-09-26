@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 import { freeApiService } from '../services/freeapiservice';
 
 @Component({
@@ -9,11 +10,11 @@ import { freeApiService } from '../services/freeapiservice';
 })
 export class HomeComponent implements OnInit {
   namelist:any;
-  constructor(private freeapiservice: freeApiService )  { }
+  constructor(private freeapiservice: freeApiService , private route:Router )  { }
   ngOnInit(): void {
     this.freeapiservice.getInfo().subscribe(
       data=>{
-        console.log(data.data.children);
+      //  console.log(data.data.children);
         // for (var i of data.data.children) {
         //   console.log(JSON.stringify(data.data.children(i)));
 
@@ -27,5 +28,9 @@ export class HomeComponent implements OnInit {
 
       }
     )
+    
+  }
+  navtoPostDetail(tname:string,timg:string,tauthor:string,tcount:any,tcomments:any){
+   this.route.navigate(['post-detail'],{queryParams:{data:tname,timg,tauthor,tcount,tcomments}});   
   }
 }

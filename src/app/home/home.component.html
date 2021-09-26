@@ -69,8 +69,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-sm-8">
-            <div class="post-wrap">
-              <div class="card" *ngFor="let i of namelist" [routerLink]="['/post-detail']">
+            <div class="post-wrap" >
+              <!-- <input type="text" [(ngModel)]="testdata">
+              <button  (click)="navtoPostDetail()" >send</button> -->
+              <div class="card" *ngFor="let i of namelist"  (click)="navtoPostDetail(i.data.title,i.data.url,i.data.author_fullname,i.data.score,i.data.num_comments)">
                 <div class="post-img"><img src="{{i.data.url}}" alt="" srcset=""></div>
                 <div class="post-content">
                   <h4>{{i.data.title}}</h4>

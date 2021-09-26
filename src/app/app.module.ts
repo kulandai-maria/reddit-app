@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { freeApiService } from './services/freeapiservice';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { freeApiService } from './services/freeapiservice';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [freeApiService],
   bootstrap: [AppComponent]
